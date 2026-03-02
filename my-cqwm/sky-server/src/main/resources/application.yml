@@ -2,6 +2,17 @@ server:
   port: 8080
 
 spring:
+  spring:
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+  logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n"
+  charset:
+    console: UTF-8
   profiles:
     active: dev
   main:
