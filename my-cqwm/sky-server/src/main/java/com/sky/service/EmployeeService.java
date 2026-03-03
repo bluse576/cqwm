@@ -4,7 +4,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.sky.dto.EmployeeDTO;
 import com.sky.dto.EmployeeLoginDTO;
+import com.sky.dto.EmployeePageQueryDTO;
 import com.sky.entity.Employee;
+import com.sky.result.PageResult;
 import com.sky.result.Result;
 
 public interface EmployeeService {
@@ -24,5 +26,13 @@ public interface EmployeeService {
      * @return
      */
     void save(EmployeeDTO employeeDTO);
+
+    /**
+     * 分页查询
+     * 
+     * @param employeePageQueryDTO
+     * @return
+     */
+    PageResult pageQuary(EmployeePageQueryDTO employeePageQueryDTO);
 
 }
